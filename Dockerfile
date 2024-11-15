@@ -130,6 +130,7 @@ RUN if [ "$USE_OLLAMA" = "true" ]; then \
     apt-get install -y --no-install-recommends gcc python3-dev && \
     # for RAG OCR
     apt-get install -y --no-install-recommends ffmpeg libsm6 libxext6 && \
+    apt upgrade libpython3.11-minimal && \
     # cleanup
     rm -rf /var/lib/apt/lists/*; \
     fi
